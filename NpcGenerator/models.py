@@ -17,9 +17,17 @@ class Class(models.Model):
 
 
 class Subclass(models.Model):
-    race = models.ForeignKey(Race, on_delete=models.CASCADE)
-    hero_class = models.ForeignKey(Class, on_delete=models.CASCADE)
+
     name = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
+
+
+class FinalModel(models.Model):
+    race = models.ForeignKey(Race, on_delete=models.CASCADE)
+    hero_class = models.ForeignKey(Class, on_delete=models.CASCADE)
+    Subclass = models.ForeignKey(Subclass, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.race} {self.hero_class} {self.Subclass}'

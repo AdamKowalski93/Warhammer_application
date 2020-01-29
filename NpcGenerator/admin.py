@@ -6,4 +6,4 @@ from .models import *
 admin.site.register(Race)
 admin.site.register(Class)
 admin.site.register(Subclass)
-admin.site.register(FinalModel)
+# admin.site.register(FinalModel)

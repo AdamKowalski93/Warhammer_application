@@ -20,6 +20,7 @@ from NpcGenerator import views
 
 router = routers.DefaultRouter()
 router.register(r'race', views.RaceViewSet)
+router.register(r'class', views.ClassViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
